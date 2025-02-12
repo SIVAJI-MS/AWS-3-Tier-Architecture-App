@@ -57,7 +57,7 @@ Configure MySQL Database
 Connect to the database and perform basic configuration: Replace below info with your DB information
 mysql -h <DB EndPoint> -u admin -p ----> Enter the Password i.e kastro2025 (this is DB password). If you couldn't connect, there is a problem with the SG of the DB.
 
-Ex: mysql -h database-1.c380a08uukyc.ap-south-1.rds.amazonaws.com -u admin -p
+Ex: mysql -h database-2.cdyi240okzg4.ap-south-1.rds.amazonaws.com -u admin -p
 
 Lets create a database. The database name i'm creating is "webappdb" (This is same name that you should give in DvConfig.js file);
 CREATE DATABASE webappdb;
@@ -106,7 +106,7 @@ Download application code from S3 and start the application
 cd ~/ 
 sudo aws s3 cp s3://<S3BucketName>/application-code/app-tier/ app-tier --recursive
 
-Ex: sudo aws s3 cp s3://demo-3tier-project/application-code/app-tier/ app-tier --recursive
+Ex: sudo aws s3 cp s3://demo-3tier-projectt/application-code/app-tier/ app-tier --recursive
 
 ls ---> You will see 'app-tier' folder
 
@@ -160,7 +160,7 @@ nvm install 16
 nvm use 16
 
 aws s3 cp s3://<S3 Bucker Name>/application-code/web-tier/ web-tier --recursive
-Ex: aws s3 cp s3://demo-3tier-project/application-code/web-tier/ web-tier --recursive
+Ex: aws s3 cp s3://demo-3tier-projectt/application-code/web-tier/ web-tier --recursive
 
 ls ----> You will see 'web-tier'
 
@@ -176,7 +176,7 @@ ls ----> You will see 'nginx.conf' file
 
 sudo rm nginx.conf
 sudo aws s3 cp s3://<S3 Bucker Name>/application-code/nginx.conf .
-Ex: sudo aws s3 cp s3://demo-3tier-project/application-code/nginx.conf .
+Ex: sudo aws s3 cp s3://demo-3tier-projectt/application-code/nginx.conf .
 sudo service nginx restart
 
 chmod -R 755 /home/ec2-user
